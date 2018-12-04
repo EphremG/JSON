@@ -1,0 +1,264 @@
+{
+	"_id": "ophCa4jADAzrnSh4k",
+	"title": "IDOR Lab",
+	"description": "Daniel, who is a full stack PHP developer implemented a grade management system(GMS) which is used by the student, teacher, and administrator. This system has lots of cool features such as login page, students to view grade reports online, teachers to publish students result, admin to manage the overall system and so many other features. The problem is that he knows nothing about web application security. It’s up to you to find out if he left in any vulnerabilities and fix them.",
+	"success": "Add text to display on lab end",
+	"owner": "vAWeY7ewfLouJKebZ",
+	"createdAt": "2018-10-16T11:43:34.177Z",
+	"updatedAt": "2018-11-28T10:21:09.265Z",
+	"in_hub": false,
+	"allow_end": false,
+	"show_chat": false,
+	"disable_feedback": false,
+	"disable_clipboard": true,
+	"display": "progress",
+	"git": {
+		"uri": "git@git.lab.rangeforce.com:/srv/git/wase-learning-idor2-setup.git",
+		"user": "BqSaMFYSLGPaMJMrD",
+		"branch": "",
+		"files": [
+			{
+				"path": "setup.sh",
+				"commit": {
+					"hash": "latest",
+					"author": "N/A",
+					"date": "N/A",
+					"message": "latest commit in this branch"
+				},
+				"branch": "master",
+				"name": "setup"
+			},
+			{
+				"path": "data/git_ro_rsa2048",
+				"commit": {
+					"hash": "latest",
+					"author": "N/A",
+					"date": "N/A",
+					"message": "latest commit in this branch"
+				},
+				"branch": "master",
+				"name": "read_key"
+			}
+		]
+	},
+	"display_unit": "%",
+	"version": "",
+	"contributors": [
+		"Hzy2SED8peXgbpKEy",
+		"vAWeY7ewfLouJKebZ",
+		"KCEbAhvsmb3QyoL2d"
+	],
+	"test_users": [],
+	"material": "https://ephremg.github.io/Material/",
+	"web": "",
+	"topology": "",
+	"objectives": [
+		{
+			"title": "Introduction",
+			"weight": 0.5,
+			"oname": "obj-jr8",
+			"description": "Daniel, who is a full stack PHP developer implemented a grade management system(GMS) which is used by the student, teacher, and administrator. This system has lots of cool features such as login page, students to view grade reports online, teachers to publish students result, admin to manage the overall system and so many other features. The problem is that he knows nothing about web application security. It’s up to you to find out if he left in any vulnerabilities and fix them.",
+			"createdAt": "2018-11-01T14:14:29.433Z",
+			"updatedAt": "2018-11-05T13:53:43.516Z",
+			"longTitle": "Introduction",
+			"enabled": true,
+			"visible": true,
+			"compulsory": true,
+			"completionMethod": "view",
+			"material": "",
+			"web": ""
+		},
+		{
+			"title": "Finding Confidential Information",
+			"weight": 1,
+			"oname": "obj-saj",
+			"description": "It is not uncommon for a developer to expose a reference to an internal implementation object as a URL or form parameter. Without an access control check or other protection, attackers can manipulate these references to access unauthorized data. In our example, the application’s authorization functionality does not prevent one user from gaining access to another user's data or record by modifying the key value identifying the data.  \nUse the following credential to login as a student and complete the following three tasks.\n\nUsername: student  \nPassword: student  \nRole: student",
+			"createdAt": "2018-11-01T14:20:48.643Z",
+			"updatedAt": "2018-11-21T11:36:48.063Z",
+			"longTitle": "Finding Confidential Information",
+			"enabled": true,
+			"visible": true,
+			"compulsory": true,
+			"completionMethod": "form",
+			"material": "",
+			"web": "",
+			"steps": [],
+			"form": [
+				{
+					"text": "What is the first semester total mark result for student name Abeni",
+					"qname": "question-sw6",
+					"type": "contain",
+					"score": 0,
+					"limit": 100,
+					"confirm": false,
+					"expected": [
+						"174"
+					],
+					"createdAt": "2018-11-01T14:27:40.116Z",
+					"updatedAt": "2018-11-21T12:53:34.824Z"
+				}
+			]
+		},
+		{
+			"title": "Manipulating Encoded Parameter",
+			"weight": 1,
+			"oname": "obj-sdy",
+			"description": "Encoding parameter value is one of the best practice approaches which makes it harder for an attacker to predict the parameter value. However, it is not a complete solution to protect against IDOR vulnerability. Use the following credentials to login as a student \n\nUsername: student    \nPassword: student  \nRole: student   \n\n\nGo to your profile page and find a way to complete the next task.",
+			"createdAt": "2018-11-01T18:41:52.180Z",
+			"updatedAt": "2018-11-21T12:42:23.322Z",
+			"longTitle": "Manipulating Encoded Parameter",
+			"enabled": true,
+			"visible": true,
+			"compulsory": true,
+			"completionMethod": "form",
+			"material": "",
+			"web": "",
+			"form": [
+				{
+					"text": "What is the email address of student Abeni?",
+					"qname": "question-4ps",
+					"type": "value",
+					"score": 0,
+					"limit": 100,
+					"confirm": false,
+					"expected": [
+						"ab3n1@abc.com"
+					],
+					"createdAt": "2018-11-02T07:34:19.226Z",
+					"updatedAt": "2018-11-21T11:42:39.775Z"
+				}
+			]
+		},
+		{
+			"title": "Deleting records",
+			"weight": 1,
+			"oname": "obj-j33",
+			"description": "One of the most common impacts of IDOR vulnerability is that if authorization check is missed from the web application, it leads to loss of all records from the database. In this exercise, by taking advantage of IDOR vulnerability, you will be asked to login to the system and remove all records from the blog page. \nUse the following login credentials to login as a student.\n\n\nUsername: student    \nPassword: student    \nRole: student",
+			"createdAt": "2018-11-02T07:35:05.332Z",
+			"updatedAt": "2018-11-21T11:37:41.774Z",
+			"longTitle": "Deleting records",
+			"enabled": true,
+			"visible": true,
+			"compulsory": true,
+			"completionMethod": "form",
+			"material": "",
+			"web": "",
+			"form": [
+				{
+					"text": "Remove all comments/posts from blog page and submit the flag",
+					"qname": "question-7p6",
+					"type": "value",
+					"score": 0,
+					"limit": 100,
+					"confirm": false,
+					"expected": [
+						"Y0U_AR3_7H3_B357"
+					],
+					"createdAt": "2018-11-02T07:37:44.875Z",
+					"updatedAt": "2018-11-02T07:37:44.875Z"
+				}
+			]
+		},
+		{
+			"title": "Protect Confidential Information",
+			"weight": 1.5,
+			"oname": "studentresult",
+			"description": "Owing to the missing access control in the system, a malicious student find a way to view other students result simply by changing the roleid from the URL. You as a Secure Software Developer needs to fix this flaw from the source code.  \n\nIn result.php page, all necessary session values are stored which helps you to solve this task.",
+			"createdAt": "2018-11-02T08:04:05.308Z",
+			"updatedAt": "2018-11-25T22:50:05.770Z",
+			"longTitle": "Protect Confidential Information",
+			"enabled": true,
+			"visible": true,
+			"compulsory": true,
+			"completionMethod": "test",
+			"material": "",
+			"web": "",
+			"hints": [
+				{
+					"text": "Check result.php source code",
+					"hname": "hint-jr4",
+					"price": 0,
+					"createdAt": "2018-11-02T08:05:39.444Z",
+					"updatedAt": "2018-11-02T08:05:39.444Z"
+				},
+				{
+					"text": "Use a conditional statement to validate the Logged in student rollid and user input from URL\n\n\nif ($_SESSION['StudentRoleId'] != $rollid){  \n\techo \"You dont have permission to view this page!\";  \n}  \nelse {  \ndisplay results.......  \n}",
+					"hname": "hint-8hk",
+					"price": 10,
+					"createdAt": "2018-11-02T08:47:06.016Z",
+					"updatedAt": "2018-11-19T12:18:53.975Z"
+				}
+			]
+		},
+		{
+			"title": "Protect Parameter Tampering",
+			"weight": 1.5,
+			"oname": "profile",
+			"description": "From the profile page, it is possible to view other student's profile, the parameter value is encoded with base64, which can easily be decoded using tools and manipulating the value is possible.  Your task is to implement access control before displaying the profile page.\n\nYou as a Secure Software Developer needs to fix this flaw from the source code.",
+			"createdAt": "2018-11-02T08:51:16.196Z",
+			"updatedAt": "2018-11-21T12:47:07.938Z",
+			"longTitle": "Protect Parameter Tampering",
+			"enabled": true,
+			"visible": true,
+			"compulsory": true,
+			"completionMethod": "test",
+			"material": "",
+			"web": "",
+			"hints": [
+				{
+					"text": "Add your fix in profile.php page line#19",
+					"hname": "hint-ief",
+					"price": 0,
+					"createdAt": "2018-11-22T12:29:41.792Z",
+					"updatedAt": "2018-11-22T12:29:41.792Z"
+				},
+				{
+					"text": "add the following code at line # 18  \n\nif($_SESSION['StudentRoleId'] != $id){  \n\techo \"No permission\";  \n        die();  \n}",
+					"hname": "hint-x3a",
+					"price": 1,
+					"createdAt": "2018-11-22T12:30:06.776Z",
+					"updatedAt": "2018-11-28T10:20:12.123Z"
+				}
+			]
+		},
+		{
+			"title": "Protect Data loss",
+			"weight": 1.5,
+			"oname": "commentfix",
+			"description": "Due to the insufficient amount of authorization on the blog page, it allows a malicious user to delete the entire comments/posts from the blog page. \n\nYou need to fix this flaw from the source code.",
+			"createdAt": "2018-11-21T10:11:59.509Z",
+			"updatedAt": "2018-11-22T07:28:16.455Z",
+			"longTitle": "Protect Data loss",
+			"enabled": true,
+			"visible": true,
+			"compulsory": true,
+			"completionMethod": "test",
+			"material": "",
+			"web": "",
+			"hints": [
+				{
+					"text": "Review deletecomment.php source code.",
+					"hname": "hint-z6o",
+					"price": 0,
+					"createdAt": "2018-11-21T10:23:35.230Z",
+					"updatedAt": "2018-11-21T10:23:35.230Z"
+				},
+				{
+					"text": "To delete comment we need to specify commentID and StudentID to the sql syntax",
+					"hname": "hint-o0f",
+					"price": 0,
+					"createdAt": "2018-11-21T10:25:38.614Z",
+					"updatedAt": "2018-11-21T10:25:38.614Z"
+				},
+				{
+					"text": "Modify the source code as follow  \n        $sql = \"delete from comment where id=:id and studentId=:studentId\";  \n        $deletecomment = $dbh->prepare($sql);  \n        $deletecomment-> bindParam(':id', $id);  \n        $deletecomment-> bindParam(':studentId', $studentId);  \n        $deletecomment->execute();",
+					"hname": "hint-2rk",
+					"price": 1,
+					"createdAt": "2018-11-21T10:26:17.963Z",
+					"updatedAt": "2018-11-28T10:21:09.265Z"
+				}
+			]
+		}
+	],
+	"ownername": "rkaur"
+}
